@@ -2,6 +2,7 @@ package com.example.giaiphuongtrinh;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -62,10 +63,15 @@ public class MainActivity extends AppCompatActivity {
         this.btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int a = Integer.parseInt(numberA.getText().toString());
-                int b = Integer.parseInt(numberB.getText().toString());
+                int a = numberA.getText().toString().isEmpty() ? 0 : Integer.parseInt(numberA.getText().toString());
+                int b = numberB.getText().toString().isEmpty() ? 0 :Integer.parseInt(numberB.getText().toString());
                 int c = numberC.getText().toString().isEmpty() ? 0 : Integer.parseInt(numberC.getText().toString());
-                txtResult.setText ("Kết quả:\n"+((choice == 1) ? giaiPTBac1(a,b) : giaiPTBac2(a,b,c)));
+//                txtResult.setText ("Kết quả:\n"+((choice == 1) ? giaiPTBac1(a,b) : giaiPTBac2(a,b,c)));
+                Intent intent= new Intent(MainActivity.this, MainActivity2.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("result", "Kết quả:\n"+((choice == 1) ? giaiPTBac1(a,b) : giaiPTBac2(a,b,c)));
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         });
     }
