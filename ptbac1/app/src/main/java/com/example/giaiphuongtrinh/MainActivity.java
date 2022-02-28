@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
     private RadioButton choice1, choice2;
     private int choice;
 
-
     public static String giaiPTBac1(int a,int b){
         return a==0 ? b==0 ? "Phương trình vô số nghiệm" : "Phương trình vô nghiệm" : String.valueOf((float)-b/a);
     }
@@ -26,9 +25,10 @@ public class MainActivity extends AppCompatActivity {
         if(a == 0) return giaiPTBac1(b,c);
         else {
             double delta = b*b - 4*a*c;
-            if (delta < 0) return "Phương trình vô nghiệm";
-            else if(delta == 0) return "Phương trình có nghiệm kép: "+ ((float) -b/(2*a));
-            else return "X1 = "+((-b- Math.sqrt(delta))/(2*a))+ "\nX2 = "+((-b+ Math.sqrt(delta))/(2*a));
+            return delta < 0 ? "Phương trình vô nghiệm" :
+                   delta == 0 ? "Phương trình có nghiệm kép: "+ ((float) -b/(2*a)) :
+                   "X1 = "+((-b- Math.sqrt(delta))/(2*a)) +
+                   "\nX2 = "+((-b+ Math.sqrt(delta))/(2*a));
         }
     }
 
