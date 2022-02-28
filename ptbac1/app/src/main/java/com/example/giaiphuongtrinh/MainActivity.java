@@ -20,22 +20,17 @@ public class MainActivity extends AppCompatActivity {
 
 
     public static String giaiPTBac1(int a,int b){
-        if(a==0) return b==0 ? "Phương trình vô số nghiệm" : "Phương trình vô nghiệm";
-        else return String.valueOf((float)-b/a);
+        return a==0 ? b==0 ? "Phương trình vô số nghiệm" : "Phương trình vô nghiệm" : String.valueOf((float)-b/a);
     }
     public static String giaiPTBac2(int a,int b,int c){
-        if(a == 0){
-            if(b==0) return c==0? "Phương trình vô số nghiệm" : "Phương trình vô nghiệm";
-            else return String.valueOf((float) -c/b);
-        }
+        if(a == 0) return giaiPTBac1(b,c);
         else {
             double delta = b*b - 4*a*c;
             if (delta < 0) return "Phương trình vô nghiệm";
-            else if(delta == 0) return "Phương trình có nghiệm kép: "+ String.valueOf((float) -b/(2*a));
+            else if(delta == 0) return "Phương trình có nghiệm kép: "+ ((float) -b/(2*a));
             else return "X1 = "+((-b- Math.sqrt(delta))/(2*a))+ "\nX2 = "+((-b+ Math.sqrt(delta))/(2*a));
         }
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
