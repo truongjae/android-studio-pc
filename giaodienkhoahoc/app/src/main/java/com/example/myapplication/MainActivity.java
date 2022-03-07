@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private CheckBox cbAndroid;
     private CheckBox cbWebsite;
     private CheckBox cbASP;
-    private Button btnSub;
+    private Button btnSub, btnCancel;
     private String gender;
     private List<String> listCourse;
     @Override
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         this.cbWebsite = findViewById(R.id.cbWebsite);
         this.cbASP = findViewById(R.id.cbASP);
         this.btnSub = findViewById(R.id.btnSub);
-
+        this.btnCancel = findViewById(R.id.btnCancel);
         this.radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
@@ -80,6 +80,12 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtras(bundle);
                     startActivity(intent);
                 }
+            }
+        });
+        this.btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
 
