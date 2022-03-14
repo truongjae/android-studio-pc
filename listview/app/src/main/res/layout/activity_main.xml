@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edtMH"
+        android:hint="Nhập môn học"
+        android:layout_alignParentTop="true"
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <Button
+        android:id="@+id/btnThem"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:text="Thêm"
+        android:layout_below="@+id/edtMH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btnSua"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/btnThem"
+        android:layout_marginLeft="30dp"
+        android:text="Sửa"
+        android:layout_below="@+id/edtMH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btnXoa"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@+id/btnSua"
+        android:text="Xóa"
+        android:layout_below="@+id/edtMH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btnXoa"
+        android:layout_marginTop="20sp"
+        />
+</RelativeLayout>
