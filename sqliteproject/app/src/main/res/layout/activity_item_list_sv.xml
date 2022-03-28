@@ -8,7 +8,7 @@
         android:id="@+id/tvId"
         android:text="1"
         android:layout_width="50dp"
-        android:layout_height="wrap_content"
+        android:layout_height="110dp"
         android:gravity="center"
         android:textColor="#FF9800"
         android:textStyle="bold"
