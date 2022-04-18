@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InsertActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:text="nhập thông tin vật tư"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_200"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="45sp"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginLeft="25dp"
+        android:gravity="center"
+        android:text="Tên: "></TextView>
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginRight="25dp"
+        android:layout_toRightOf="@+id/tvName"></EditText>
+
+
+
+    <TextView
+        android:id="@+id/tvDonViTinh"
+        android:layout_width="wrap_content"
+        android:layout_height="45sp"
+        android:layout_below="@id/edtName"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Đơn vị tính: "></TextView>
+
+    <EditText
+        android:id="@+id/edtDonViTinh"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/edtName"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="25dp"
+        android:layout_toRightOf="@+id/tvDonViTinh"></EditText>
+    <TextView
+        android:id="@+id/tvDonGia"
+        android:layout_width="wrap_content"
+        android:layout_height="45sp"
+        android:layout_below="@id/tvDonViTinh"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Đơn giá: "></TextView>
+
+    <EditText
+        android:id="@+id/edtDonGia"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/edtDonViTinh"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="25dp"
+        android:inputType="number"
+        android:layout_toRightOf="@+id/tvDonGia"></EditText>
+
+
+
+
+    <TextView
+        android:id="@+id/tvHangSanXuat"
+        android:layout_width="wrap_content"
+        android:layout_height="45sp"
+        android:layout_below="@id/tvDonGia"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Hãng Sản Xuất: "></TextView>
+
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/edtHangSanXuat"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/tvDonGia"
+        android:layout_marginRight="25dp"
+        android:layout_toRightOf="@+id/tvHangSanXuat"></EditText>
+
+
+
+    <LinearLayout
+        android:id="@+id/listBtn"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_below="@+id/tvHangSanXuat">
+
+
+        <Button
+            android:id="@+id/btnInsert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thêm"
+            android:layout_marginLeft="5dp"
+            ></Button>
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thoát"
+            android:layout_marginLeft="5dp"
+            ></Button>
+    </LinearLayout>
+
+</RelativeLayout>
