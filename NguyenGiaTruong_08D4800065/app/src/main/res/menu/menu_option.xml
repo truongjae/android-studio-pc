@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Thêm"
+        android:id="@+id/menuAdd"/>
+    <item
+        android:id="@+id/menuUpdate"
+        android:title="Sửa">
+        <menu>
+            <item
+                android:id="@+id/menuUpdateFullname"
+                android:title="Sủa theo tên" />
+            <item
+                android:id="@+id/menuUpdateId"
+                android:title="Sủa theo ID"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/menuClear"
+        android:title="Xóa"/>
+    <item
+        android:id="@+id/menuExit"
+        android:title="Thoát"/>
+</menu>

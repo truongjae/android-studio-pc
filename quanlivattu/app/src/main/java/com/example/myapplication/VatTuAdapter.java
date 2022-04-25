@@ -28,7 +28,7 @@ public class VatTuAdapter extends ArrayAdapter<VatTu> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHodel viewHodel;
-        if(convertView==null){
+        if(convertView==null){  
             convertView = LayoutInflater.from(context).inflate(R.layout.activity_item_list_sv,parent,false);
             viewHodel = new ViewHodel();
             viewHodel.tvId = (TextView) convertView.findViewById(R.id.tvId);
