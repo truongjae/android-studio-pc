@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InsertActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:text="nhập thông tin thực phẩm"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_200"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="45sp"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginLeft="25dp"
+        android:gravity="center"
+        android:text="Tên SP: "></TextView>
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/tvTitle"
+
+        android:layout_marginRight="25dp"
+        android:layout_toRightOf="@+id/tvName"
+        android:inputType="number"></EditText>
+    <TextView
+        android:id="@+id/tvDonViTinh"
+        android:layout_width="wrap_content"
+        android:layout_height="45sp"
+        android:layout_below="@id/tvName"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Đơn Vị Tính: "></TextView>
+
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/edtDonViTinh"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/tvName"
+        android:layout_marginRight="25dp"
+        android:layout_toRightOf="@+id/tvDonViTinh"></EditText>
+    <TextView
+        android:id="@+id/tvDonGia"
+        android:layout_width="wrap_content"
+        android:layout_height="45sp"
+        android:layout_below="@id/tvDonViTinh"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Đơn Giá: "></TextView>
+
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/edtDonGia"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/tvDonViTinh"
+        android:layout_marginRight="25dp"
+        android:layout_toRightOf="@+id/tvDonGia"></EditText>
+
+
+    <LinearLayout
+        android:id="@+id/listBtn"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_below="@+id/tvDonGia">
+
+
+        <Button
+            android:id="@+id/btnInsert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thêm"
+            android:layout_marginLeft="5dp"
+            ></Button>
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thoát"
+            android:layout_marginLeft="5dp"
+            ></Button>
+    </LinearLayout>
+
+</RelativeLayout>

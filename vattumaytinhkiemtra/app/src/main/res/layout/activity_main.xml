@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10sp"
+    tools:context="com.example.NguyenGiaTruong_08D4800065.MainActivityNguyenGiaTruong">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="quản lý máy tính"
+        android:textAllCaps="true"
+        android:textColor="@color/purple_200"
+        android:textSize="20sp"
+        android:textStyle="bold"></TextView>
+
+    <LinearLayout
+        android:id="@+id/listSearch"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        >
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_below="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Nhập nội dung tìm kiếm"></EditText>
+        <Button
+            android:id="@+id/btnSearch"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/edtSearch"
+            android:text="Tìm kiếm"
+            android:layout_marginLeft="20dp"
+            ></Button>
+    </LinearLayout>
+
+
+
+    <ListView
+        android:id="@+id/lvMayTinh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/listSearch"/>
+
+
+</RelativeLayout>
